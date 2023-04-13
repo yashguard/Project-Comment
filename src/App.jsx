@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Form} from './Components/Form'
+import {Cart} from './Components/Cart'
 
 function App() {
   let [data,setData] = useState([])
@@ -13,7 +13,7 @@ function App() {
   apiArray()
   return (
     <>
-      <Form />
+      <Cart />
     </>
   );
 }

@@ -15,14 +15,15 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   box-shadow: 0px 0px 18px black;
   margin: 20px 0;
 }
 
+/* image */
 .image {
   width: 40%;
   padding: 15px;
+  text-align: center;
 }
 
 .image img {
@@ -31,14 +32,15 @@
   margin: 0 auto;
 }
 
-.image button {
+.image button,
+.content button {
   position: relative;
   background-color: blue;
   color: white;
   padding: 12px 30px;
   border: none;
   display: inline-block;
-  margin: 20px 20px 0 0;
+  margin: 20px 50px 0 0;
   margin-left: 0px;
   cursor: pointer;
   font-size: 16px;
@@ -46,11 +48,13 @@
   overflow: hidden;
 }
 
-.image button:hover {
+.image button:hover,
+.content button:hover {
   background-color: black;
 }
 
-.image button::after {
+.image button::after,
+.content button::after {
   position: absolute;
   content: '';
   top: -50px;
@@ -62,6 +66,85 @@
   transition: all 1s;
 }
 
-.image button:hover::after {
+.image button:hover::after,
+.content button:hover::after {
   left: 195px;
+}
+
+.content {
+  width: 60%;
+  padding: 15px;
+}
+
+.content .title {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 35px;
+  font-weight: 800;
+  color: black;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+}
+
+.content .description {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 0;
+}
+
+.content .price {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.content .disc {
+  color: red;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.content .rating {
+  background-color: green;
+  margin: 10px 0;
+  width: fit-content;
+  padding: 5px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.content .rating i {
+  font-size: 10px;
+  margin-left: 3px;
+}
+
+.content .brand {
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+
+.content .category {
+  margin: 5px 0 15px;
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+  text-transform: capitalize;
+}
+
+.content button {
+  display: block;
+  margin: 0 auto;
+}
+
+.content .comment-box {
+  width: 100%;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-top: 10px;
 }
