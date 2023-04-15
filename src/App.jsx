@@ -16,11 +16,11 @@ function App() {
   let fname = useRef()
   let lname = useRef()
   let email = useRef()
-  let comment = useRef("")
+  let comment = useRef()
   const submit = (e) => {
     e.preventDefault();
-    setComments(comment.current)
-    console.log(comments)
+    setComments(comment.current.value)
+    console.log(comment.current.value)
     if (fname.current.value === "") {
       alert("Please write your name.");
       fname.current.focus()

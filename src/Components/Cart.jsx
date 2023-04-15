@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const Cart = (props) => {
+   let [comment,setComment] = useState(props.comment);
    return (
       <div>
          <div className="container">
@@ -18,7 +19,7 @@ export const Cart = (props) => {
                   <div className="rating">{props.rating}<i class="fa-solid fa-star"></i></div>
                   <div className="brand">{props.brand}</div>
                   <div className="category">{props.category}</div>
-                  <p>{props.comment}</p>
+                  <p>Comments : {props.comment}</p>
                </div>
             </div>
          </div>
